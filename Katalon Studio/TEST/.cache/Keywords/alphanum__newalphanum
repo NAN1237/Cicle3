@@ -1,0 +1,30 @@
+{
+  "keywordFileContentHash": "04B2725C37F3746263B2B5748A356372",
+  "keywordClasses": [
+    {
+      "name": "alphanum.newalphanum",
+      "keywordMethods": [
+        {
+          "name": "myCustomRandom",
+          "parameters": [
+            {
+              "name": "msg",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}
