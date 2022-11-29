@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="73.103">
+    <testcase classname="TypeChat" name="Chat is appear scenerio" time="72.698">
+        <system-out><![CDATA[Given User Click Group Chat.................................................passed
+When Type Chat..............................................................passed
+Then Click Send & Chat is appear............................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
