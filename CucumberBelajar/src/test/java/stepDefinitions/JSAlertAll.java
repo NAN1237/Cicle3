@@ -1,3 +1,5 @@
+package stepDefinitions;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,8 +16,9 @@ public class JSAlertAll {
 
     WebDriver driver;
 
+
     @Given("User Buka Websitenya")
-    public void userBukaWebsitenyaTheInternetHerokuappComJavascript_alerts() throws InterruptedException {
+    public void s() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         driver = new ChromeDriver();
 //        driver.manage().window().maximize();
@@ -40,27 +43,31 @@ public class JSAlertAll {
     }
 
     @Then("User melihat Pop Up muncul dan melakukan asersi")
-    public void userMelihatPopUpMunculDanMelakukanAsersi() {
+    public void x() {
 
         Alert alert1 = driver.switchTo().alert();
         System.out.println(alert1.getText());
 
         //Tambahan di luar youtube
-        Assert.assertEquals(alert1.getText(),"I am a JS Alert");
+        Assert.assertEquals(alert1.getText(), "I am a JS Alert");
     }
 
-    @And("Close")
-    public void xxx() {
 
-        driver.quit();
-    }
+//    @Given("Chrome Driver")
+//    public void c2() throws InterruptedException {
+//        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+//        driver = new ChromeDriver();
+////        driver.manage().window().maximize();
+//    }
 
     @When("Klik Tombol Ok JS Alert")
     public void klikTombolOkJSAlert() throws InterruptedException {
+        System.out.println("ini sebelum click");
         Alert alert1 = driver.switchTo().alert();
 
         //Pengganti Function Klik Tombol OK karena gaada Inspect nya
         alert1.accept();
+        System.out.println("ini sesudah click");
         Thread.sleep(3000);
 
     }
@@ -76,6 +83,12 @@ public class JSAlertAll {
 
     }
 
+    @And("Close")
+    public void xxx() {
+
+        driver.quit();
+    }
+
     @When("User Klik Tombol JS Confirm")
     public void userKlikTombolJSConfirm() throws InterruptedException {
         WebElement JSConfirm = driver.findElement(By.xpath("//button[@onclick='jsConfirm()']"));
@@ -89,13 +102,14 @@ public class JSAlertAll {
 
     }
 
+
     @Then("User melihat Pop Up muncul dan melakukan asersi JS Confirm")
     public void userMelihatPopUpMunculDanMelakukanAsersiJSConfirm() {
 
         Alert alert2 = driver.switchTo().alert();
 
         //Tambahan di luar youtube
-        Assert.assertEquals(alert2.getText(),"I am a JS Confirm");
+        Assert.assertEquals(alert2.getText(), "I am a JS Confirm");
     }
 
     @When("Klik Tombol Cancel Pop Up JS Confirm")
@@ -117,7 +131,8 @@ public class JSAlertAll {
         //Cara Assertion 2
         String y = ResultAlert2.getText();
         System.out.println(y);
-        Assert.assertEquals(y, "You clicked: Cancel");  }
+        Assert.assertEquals(y, "You clicked: Cancel");
+    }
 
     @When("Klik Tombol OK Pop Up JS Confirm")
     public void klikTombolOKPopUpJSConfirm() throws InterruptedException {
@@ -162,7 +177,7 @@ public class JSAlertAll {
         Alert alert3 = driver.switchTo().alert();
 
         //Tambahan di luar youtube
-        Assert.assertEquals(alert3.getText(),"I am a JS prompt");
+        Assert.assertEquals(alert3.getText(), "I am a JS prompt");
     }
 
     @When("Klik Tombol Cancel Pop Up JS Prompt")
@@ -220,5 +235,19 @@ public class JSAlertAll {
         Thread.sleep(3000);
 
         driver.quit();
+
+    }
+
+    @And("User Klik Tombol Ok JS Alert")
+    public void userKlikTombolOkJSAlert() throws InterruptedException {
+            System.out.println("ini sebelum click");
+            Alert alert1 = driver.switchTo().alert();
+
+            //Pengganti Function Klik Tombol OK karena gaada Inspect nya
+            alert1.accept();
+            System.out.println("ini sesudah click");
+            Thread.sleep(3000);
     }
 }
+
+
